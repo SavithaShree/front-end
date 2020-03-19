@@ -1,0 +1,10 @@
+<tr>
+    <th *ngFor="let column of columns">{{column.heading}}</th>
+</tr>
+<div *ngFor="let data of tableData; let index=index">
+<tr>
+    <td>{{index + 1}}</td>
+    <td>{{data.name}}</td>
+    <i class="fa fa-edit" (click)="editData()"></i>
+</tr>
+</div>

@@ -1,0 +1,25 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm.value)">
+    <div class="form-field">
+        <label>Name</label>
+        <input type="text" formControlName="userName" placeholder="Enter name" />
+    </div>
+    <div>
+        <label>Email Address</label>
+        <input type="email" formControlName="emailAddress" placeholder="Enter email address" />
+    </div>
+    <!-- <div class="form-group">
+        <label>Role</label>
+        <select class="form-control" id="roleId" formControlName="roleId">
+            <option *ngFor="let role of roles" [value]="role.value">{{role.label}}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Department</label>
+        <select class="form-control" id="departmentId" formControlName="departmentId">
+            <option *ngFor="let department of departments" [value]="department.value">{{department.label}}</option>
+        </select>
+    </div> -->
+
+    <button type="submit" class="btn btn-default">Submit</button>
+    <button type="submit" class="btn btn-default" (click)="onCancel()">Cancel</button>
+</form>
